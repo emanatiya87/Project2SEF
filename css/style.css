@@ -3,10 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  letter-spacing: 1px;
-  perspective: 600px;
-}
 :root {
   --primaryColor: #ed5356;
   --secondaryColor: #4b1919;
@@ -15,6 +11,18 @@ body {
   --padding: 7px;
 }
 /* general */
+body {
+  letter-spacing: 1px;
+  /* font-family: "Open Sans", sans-serif; */
+  perspective: 600px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
 .container {
   width: 80vw;
   margin: auto;
@@ -90,6 +98,7 @@ header li {
 }
 header {
   background-color: white;
+  font-size: 1.1rem;
 }
 header li a {
   text-decoration: none;
