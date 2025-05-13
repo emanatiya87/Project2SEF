@@ -1,0 +1,23 @@
+/* tablet */
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .hero {
+    height: auto;
+  }
+  .Card {
+    width: 40%;
+  }
+  .newsCard {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  .mayLike,
+  .news {
+    height: auto;
+  }
+  footer input[type="email"] {
+    width: auto;
+  }
+  footer i {
+    padding: 0;
+  }
+}
