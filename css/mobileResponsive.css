@@ -52,7 +52,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
   }
-  nav {
+  .navResponsive {
     display: block;
     width: 100dvw;
     height: 70px;
@@ -61,7 +61,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  nav .btn {
+  .navResponsive .btn {
     background-color: transparent;
     border: none;
     font-size: 3rem;
@@ -71,7 +71,7 @@
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
     position: relative;
   }
-  nav .btn div {
+  .navResponsive .btn div {
     position: fixed;
     width: 100vw;
     height: calc(100vh - 70px);
@@ -81,33 +81,33 @@
     z-index: 9;
     display: none;
   }
-  nav .btn div ul {
+  .navResponsive .btn div ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     height: 80%;
   }
-  nav .btn div li {
+  .navResponsive .btn div li {
     list-style-type: none;
   }
-  nav .btn div li a {
+  .navResponsive .btn div li a {
     text-decoration: none;
     color: white;
   }
-  nav .btn div li a:hover {
+  .navResponsive .btn div li a:hover {
     text-decoration: underline;
   }
-  nav .btn:hover div {
+  .navResponsive .btn:hover div {
     display: block;
   }
-  nav .image {
+  .navResponsive .image {
     width: 60px;
     height: 70px;
     margin: 0 10px;
   }
 
-  nav .image:hover div {
+  .navResponsive .image:hover div {
     background-image: url(../Images/hero.png);
     background-size: contain;
     background-repeat: no-repeat;
