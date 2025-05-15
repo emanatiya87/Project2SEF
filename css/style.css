@@ -218,6 +218,23 @@ header li a {
   color: var(--primaryColor);
   font-size: 1.1rem;
 }
+.cartIcon {
+  position: relative;
+}
+.cartIcon span {
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  color: white;
+  top: -20px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primaryColor);
+}
+.cartIcon:hover span {
+  top: -23px;
+}
 /* saleAlert */
 .saleAlert {
   background-color: black;
