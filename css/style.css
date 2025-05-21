@@ -225,7 +225,7 @@ header li a {
 }
 .dropDown li:hover {
   color: var(--primaryColor);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .cartIcon {
   position: relative;
