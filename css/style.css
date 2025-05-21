@@ -193,9 +193,18 @@ header li a {
   padding: 10px 4px;
   grid-template-columns: repeat(2, 1fr);
   transition: 1s;
+  animation: appear 1.2s 1;
 }
 .pages:hover .dropDown {
   display: grid;
+}
+@keyframes appear {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 .dropDownTitle {
   color: gray;
