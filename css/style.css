@@ -14,7 +14,7 @@
 body {
   letter-spacing: 1px;
   /* font-family: "Open Sans", sans-serif; */
-  perspective: 600px;
+  perspective: 1000px;
 }
 
 h1,
@@ -310,11 +310,11 @@ header li a {
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 .heroText button:hover {
   background-color: transparent;
-  border: 1px solid var(--primaryColor);
+  border: 2px solid var(--additionColor);
   color: var(--additionColor);
 }
 /* generalTypes */
@@ -377,6 +377,7 @@ header li a {
   justify-content: space-between;
   border-bottom: 1px solid gray;
 }
+
 .trend ul li {
   list-style-type: none;
   padding-bottom: 10px;
@@ -385,7 +386,8 @@ header li a {
   cursor: pointer;
   font-weight: bold;
 }
-.trend ul li:hover {
+.trend ul li:hover,
+.trend .active {
   border-bottom: 3px solid var(--primaryColor);
   color: var(--primaryColor);
 }
@@ -400,6 +402,7 @@ header li a {
   width: 23%;
   cursor: pointer;
   height: 350px;
+  position: relative;
 }
 .CardContent {
   flex-direction: column;
@@ -424,13 +427,21 @@ header li a {
 .trendCardFlip {
   height: 80%;
   position: relative;
-  transition: transform 2s;
+  transition: 2s;
   transform-style: preserve-3d;
 }
-
+.Card .middle {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
+}
 .trendCardFlip .front {
   position: absolute;
   backface-visibility: hidden;
+  transition: transform 1s;
 }
 .trendCardFlip .back {
   position: absolute;
@@ -445,12 +456,18 @@ header li a {
 }
 .backBox {
   position: absolute;
-  bottom: 10px;
+  top: 60%;
   text-align: center;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 6;
+  opacity: 0;
+  transition: 2s;
+}
+.Card:hover .backBox {
+  opacity: 1;
 }
 .backBox i {
   background-color: white;
@@ -465,6 +482,9 @@ header li a {
 .Card:hover .trendCardFlip {
   transform: rotateY(180deg);
 }
+.Card:hover .trendCardFlip .front {
+  transform: skewY(-8deg);
+}
 .Cards .fa-angle-right,
 .Cards .fa-chevron-left,
 .customerTestimonial .fa-angle-right,
@@ -474,11 +494,18 @@ header li a {
   font-size: 2rem;
   top: 50%;
 }
+
 .Cards .fa-angle-right {
   right: -30px;
 }
 .fa-chevron-left {
   left: -30px;
+}
+.Cards .fa-angle-right:hover,
+.Cards .fa-chevron-left:hover,
+.customerTestimonial .fa-angle-right:hover,
+.customerTestimonial .fa-chevron-left:hover {
+  color: var(--primaryColor);
 }
 /* customer testimonial */
 .customerTestimonial {
@@ -535,6 +562,12 @@ header li a {
   transition: transform 2s;
   overflow: hidden;
 }
+.cardFlow .backBox {
+  position: absolute;
+  bottom: -200px;
+  transition: 1s;
+}
+
 .cardFlow .front,
 .cardFlow .fromUp {
   position: absolute;
@@ -546,6 +579,9 @@ header li a {
 }
 .Card:hover .fromUp {
   top: 0;
+}
+.Card:hover .cardFlow .backBox {
+  bottom: 0;
 }
 /* latest news section */
 .news {
@@ -571,7 +607,7 @@ header li a {
   height: 80vh;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.448);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.448); */
 }
 .newsCard .image {
   height: 65%;
@@ -589,7 +625,7 @@ header li a {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
 .newsCard .newsCardContent h5,
@@ -703,4 +739,26 @@ footer hr {
 .footerLists ul li:hover {
   text-decoration: underline;
   font-size: 1.2rem;
+}
+footer .container > p {
+  text-align: center;
+}
+footer .container > p span:hover {
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+footer .fa-heart {
+  animation: heart 2s infinite;
+  color: var(--primaryColor);
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
