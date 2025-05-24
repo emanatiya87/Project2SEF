@@ -14,7 +14,7 @@
 body {
   letter-spacing: 1px;
   /* font-family: "Open Sans", sans-serif; */
-  perspective: 1100px;
+  perspective: 1000px;
 }
 
 h1,
@@ -109,7 +109,7 @@ header li a {
   display: inline-block;
   transition: transform 1s;
 }
-.rotateY180:hover {
+.social li:hover .rotateY180 {
   transform: rotateY(180deg);
 }
 .social .rotateY180 :hover {
