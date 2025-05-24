@@ -14,7 +14,7 @@
 body {
   letter-spacing: 1px;
   /* font-family: "Open Sans", sans-serif; */
-  perspective: 1000px;
+  perspective: 1100px;
 }
 
 h1,
@@ -186,7 +186,7 @@ header li a {
   display: none;
   position: absolute;
   top: 35px;
-  width: 220px;
+  width: 230px;
   border: 1px solid gray;
   background-color: #f6f5f5;
   border-radius: 10px;
@@ -235,7 +235,7 @@ header li a {
   line-height: 20px;
   position: absolute;
   color: white;
-  top: -20px;
+  top: -17px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
