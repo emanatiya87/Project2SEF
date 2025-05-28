@@ -391,6 +391,13 @@ header li a {
   border-bottom: 3px solid var(--primaryColor);
   color: var(--primaryColor);
 }
+
+.tabCard {
+  display: none;
+}
+.tabCardShow {
+  display: flex;
+}
 .Cards {
   justify-content: space-between;
   align-items: center;
