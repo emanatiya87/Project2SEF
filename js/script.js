@@ -5,43 +5,27 @@ let left = Array.from(document.getElementsByClassName("left"));
 
 tabs.forEach((element, index) => {
   element.onclick = () => {
-    tabs.filter((tab, i) => {
-      i == index ? tab.classList.add("active") : tab.classList.remove("active");
-    });
-    tabCard.filter((cards, i) => {
-      i == index
-        ? cards.classList.add("tabCardShow")
-        : cards.classList.remove("tabCardShow");
-    });
+    activeTab(index);
   };
 });
 right.forEach((element, index) => {
-  let newIndex = index == 2 ? -1 : index;
+  let taregtIndex = index == 2 ? 0 : index + 1;
   element.onclick = function () {
-    tabs.filter((tab, i) => {
-      i == newIndex + 1
-        ? tab.classList.add("active")
-        : tab.classList.remove("active");
-    });
-    tabCard.filter((cards, i) => {
-      i == newIndex + 1
-        ? cards.classList.add("tabCardShow")
-        : cards.classList.remove("tabCardShow");
-    });
+    activeTab(taregtIndex);
   };
 });
 left.forEach((element, index) => {
-  let newIndex = index == 0 ? 3 : index;
+  let taregtIndex = index === 0 ? 2 : index - 1;
   element.onclick = function () {
-    tabs.filter((tab, i) => {
-      i == newIndex - 1
-        ? tab.classList.add("active")
-        : tab.classList.remove("active");
-    });
-    tabCard.filter((cards, i) => {
-      i == newIndex - 1
-        ? cards.classList.add("tabCardShow")
-        : cards.classList.remove("tabCardShow");
-    });
+    activeTab(taregtIndex);
   };
 });
+function activeTab(taregtIndex) {
+  tabs.forEach((tab, i) => {
+    tab.classList.toggle("active", i === taregtIndex);
+  });
+
+  tabCard.forEach((card, i) => {
+    card.classList.toggle("tabCardShow", i === taregtIndex);
+  });
+}
