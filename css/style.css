@@ -681,6 +681,7 @@ header li a {
   bottom: 0;
   font-size: 4rem;
   color: gray;
+  transition: transform 0.5s;
 }
 .iconeFlow .flowUp {
   bottom: -100px;
@@ -690,6 +691,10 @@ header li a {
 .iconeCard:hover .flowUp {
   bottom: 0;
 }
+.iconeCard:hover .constI {
+  transform: rotateX(90deg);
+}
+
 .iconeCard:hover p {
   color: var(--additionColor);
 }
